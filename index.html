@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国人寿财产保险 责任险客服</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", "PingFang SC", sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+
+        /* 主容器 */
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        /* Logo 头部背景 */
+        .logo-header {
+           width: 100%;
+            height: 193px;
+            background: url('top.jpg') no-repeat ;
+            background-position:center center;
+            background-size: cover;
+            /* 替换为你的实际logo背景图地址 */
+           #background-image: url('top.jpg');
+            border-radius: 8px 8px 0 0;
+            margin: 16px 16px 0 16px;
+        }
+
+        /* 客服热线区域 */
+        .hotline-section {
+            padding: 16px 24px;
+            font-size: 18px;
+            color: #ff0000;
+            font-weight: 500;
+        }
+
+        .hotline-section .headset-icon {
+            display: inline-block;
+            margin: 0 4px;
+            vertical-align: middle;
+        }
+
+        /* 问题区域 */
+        .faq-section {
+            padding: 0 24px 24px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .faq-title {
+            font-size: 20px;
+            color: #ff66b2;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .refresh-btn {
+            font-size: 16px;
+            color: #333333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .faq-list {
+            list-style: none;
+        }
+
+        .faq-item {
+            font-size: 18px;
+            color: #333333;
+            line-height: 2.2;
+            padding-left: 24px;
+            position: relative;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .faq-item:hover {
+            color: #0066cc;
+        }
+
+        /* 自定义项目符号 */
+        .faq-item::before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+        }
+
+        .faq-item:nth-child(1)::before {
+            content: "◆";
+            color: #ff4444;
+        }
+
+        .faq-item:nth-child(2)::before {
+            content: "◆";
+            color: #ff9933;
+        }
+
+        .faq-item:nth-child(3)::before {
+            content: "◆";
+            color: #ffcc33;
+        }
+
+        .faq-item:nth-child(4)::before {
+            content: "◆";
+            color: #e0e0e0;
+        }
+
+        .faq-item:nth-child(5)::before {
+            content: "◆";
+            color: #333333;
+        }
+
+        .faq-item:nth-child(6)::before {
+            content: "◆";
+            color: #333333;
+        }
+
+        /* 按钮区域 */
+        .btn-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 24px;
+        }
+
+        .action-btn {
+            height: 56px;
+            background-color: #f0f2f5;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            color: #333333;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .action-btn:hover {
+            background-color: #e5e7eb;
+        }
+
+        /* 底部提问入口 */
+        .ask-entry {
+            text-align: center;
+            padding: 0 24px 24px;
+            font-size: 16px;
+            color: #666666;
+        }
+
+        .ask-entry a {
+            color: #333333;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .ask-entry a:hover {
+            color: #0066cc;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .btn-section {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-title {
+                font-size: 18px;
+            }
+
+            .faq-item {
+                font-size: 16px;
+                line-height: 2;
+            }
+			.logo-header {
+	            width: 100%;
+	            height:66px;
+	            #background: url('top.jpg') ;
+	            background-position:center center;
+	            display:block;
+	            /* 替换为你的实际logo背景图地址 */
+	            background-image: url('top.jpg');
+	            background-size:cover;
+	            background-repeat:no-repeat;
+	            border-radius: 8px 8px 0 0;
+	            margin:  0 auto;
+	        }
+        }
+		 /* 答案展示区域 */
+        .answer-box {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #1565c0;
+            line-height: 1.6;
+            display: none; /* 默认隐藏 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo 背景行 -->
+        <div class="logo-header"></div>
+
+        <!-- 客服热线 -->
+        <div class="hotline-section">
+            责任险客服热线: 0531-66666976 
+           
+        </div>
+
+        <!-- 常见问题区域 -->
+        <div class="faq-section">
+            <div class="faq-title">
+                请问您是否想咨询
+                
+            </div>
+            <ul class="faq-list">
+                <li class="faq-item">团体意外险有哪些保障范围?</li>
+                <li class="faq-item">团体保单累计赔偿限额和每次事故赔偿限额分别是多少?</li>
+                <li class="faq-item">电子保单如何下载?</li>
+                <li class="faq-item">团体意外险是否承保厂区通勤、外勤外出、车间作业等高风险场景?</li>
+                <li class="faq-item" onclick="showAnswer()">为什么企业用工必须配置团体意外险?</li>
+                <li class="faq-item">能否根据企业规模、员工工种风险状况，提供个性化投保方案与风险防范服务?</li>
+            </ul>
+        </div>
+		<!-- 答案区域 -->
+        <div class="answer-box" id="answerBox"></div>
+
+       
+    </div>
+
+     <script>
+        // 显示答案函数
+        function showAnswer() {
+            const answerBox = document.getElementById('answerBox');
+            // 答案文本
+            answerBox.innerText = '社保工伤保险仅赔付工伤场景，员工上下班、居家、出差非工伤意外社保不报销，团意险可覆盖24小时全天意外，降低企业自费赔偿压力。';
+            // 显示答案
+            answerBox.style.display = 'block';
+        }
+		  // 显示答案函数
+        function showAnswer1() {
+            const answerBox = document.getElementById('answerBox');
+            // 答案文本
+            answerBox.innerText = '公众责任险适用于超市、门店、酒店、商场、学校、公园、物业、餐馆等多种场所，因这些门店人流量大，滑倒摔伤高发，单起事故赔偿几万到几十万，转嫁经营风险。温馨提示:小店最好也买公众责任险，意外不分人流量，一次摔伤就亏损。';
+            // 显示答案
+            answerBox.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
